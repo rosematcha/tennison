@@ -1,0 +1,15 @@
+<header class="navbar">
+    <div class="logo">
+        <picture>
+            <source srcset="/assets/logo.webp" type="image/webp">
+            <img src="/assets/logo.png" alt="Site Logo">
+        </picture>
+    </div>
+    <nav>
+        <ul>
+            {% for page in collections.nav %}
+                <li><a id="navbar-member" href="{{ page.url }}">{{ page.data.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

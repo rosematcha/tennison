@@ -1,0 +1,47 @@
+
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+main{
+    padding: 0 2em;
+}
+
+.logo, .logo > picture, .logo > picture > img, .logo > picture > source {
+    width: 350px;
+}
+
+@media (max-width: 767px) {
+    .logo, .logo > picture, .logo > picture > img, .logo > picture > source {
+        width: 200px;
+    }
+}
+
+
+.navbar{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+nav > ul{
+    list-style-type: none;
+}
+
+#navbar-member{
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Bellefair", serif;
+}
+
+#navbar-member:hover{
+    color: #f1f1f1;
+    text-decoration: underline;
+}
