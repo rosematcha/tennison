@@ -1,0 +1,6 @@
+[build]
+  command = "git submodule update --init --recursive && npm run build"
+  publish = "_site"
+
+[context.production.environment]
+  GIT_SSH_COMMAND = "ssh -o StrictHostKeyChecking=no"
