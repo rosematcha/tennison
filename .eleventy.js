@@ -1,12 +1,19 @@
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("./src/css"); // add css folder
-    eleventyConfig.addWatchTarget("./src/css/"); // watch css for changes
-    eleventyConfig.addPassthroughCopy("./src/assets"); // add assets folder
-    eleventyConfig.addWatchTarget("./src/assets/"); // watch assets for changes
+    // Passthrough for CSS and assets
+    eleventyConfig.addPassthroughCopy("./src/css");
+    eleventyConfig.addWatchTarget("./src/css/");
+    eleventyConfig.addPassthroughCopy("./src/assets");
+    eleventyConfig.addWatchTarget("./src/assets/");
+
+    // Automatically collect all files in the "events" folder
+    eleventyConfig.addCollection("events", function (collectionApi) {
+        return collectionApi.getFilteredByGlob("src/events/**/*.{md,njk,html}");
+    });
+
     return {
-      dir: {
-        input: "src",
-        output: "_site",
-      },
+        dir: {
+            input: "src", // Where the markdown and other content is stored
+            output: "_site", // Where the generated site is stored
+        },
     };
-  };
+};
