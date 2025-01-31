@@ -5,6 +5,26 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets");
     eleventyConfig.addWatchTarget("./src/assets/");
 
+    const markdownIt = require("markdown-it");
+    const markdownItAttrs = require("markdown-it-attrs");
+
+    const markdownItOptions = {
+        html: true,
+        breaks: true,
+        linkify: true
+    }
+
+    const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)    
+    eleventyConfig.setLibrary('md', markdownLib)
+
+
+
+    module.exports = function (eleventyConfig) {
+        eleventyConfig.setLibrary("md", markdownIt({ html: true }).use(markdownItAttrs));
+    };
+
+
+
     // Automatically collect all files in the "events" folder
     eleventyConfig.addCollection("events", function (collectionApi) {
         return collectionApi.getFilteredByGlob("src/events/**/*.{md,njk,html}");
