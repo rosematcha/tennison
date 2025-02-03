@@ -1,0 +1,77 @@
+
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+main{
+    padding: 0 2em;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.logo, .logo > picture, .logo > picture > img, .logo > picture > source {
+    width: 350px;
+}
+
+@media (max-width: 767px) {
+    .logo, .logo > picture, .logo > picture > img, .logo > picture > source {
+        width: 200px;
+    }
+    li:first-child a#navbar-member {
+        margin-left: 0;
+    }
+    #navbar-member {
+        margin-left: 0.5em;
+    }
+}
+
+
+
+/* STYLES */
+.wraparound{
+    float: right;
+    padding: 0 0 15px 15px;
+}
+
+/* IMAGE SIZES */
+.teeny-image{height: 100px;}
+.small-image{height: 200px;}
+.medium-image{height: 300px;}
+.large-image{height: 400px;}
+.huge-image{height: 500px;}
+
+
+
+
+
+/* NAVIGATION BAR */
+
+.navbar{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+nav > ul{
+    list-style-type: none;
+    display: flex;
+}
+
+#navbar-member{
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Bellefair", serif;
+    margin-left: 1em;
+}
+
+#navbar-member:hover{
+    color: #f1f1f1;
+    text-decoration: underline;
+}
