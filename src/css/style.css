@@ -1,5 +1,3 @@
-
-
 body{
     font-family: sans-serif;
     margin: 0;
@@ -12,13 +10,19 @@ main{
     text-align: justify;
 }
 
+p{
+    font-family: "Atkinson Hyperlegible", serif;
+}
+
+
 .logo, .logo > picture, .logo > picture > img, .logo > picture > source {
-    width: 350px;
+    width: 250px;
+    transition: width 0.1s ease-in-out;
 }
 
 @media (max-width: 767px) {
     .logo, .logo > picture, .logo > picture > img, .logo > picture > source {
-        width: 200px;
+        width: 150px;
     }
     li:first-child a#navbar-member {
         margin-left: 0;
@@ -27,7 +31,6 @@ main{
         margin-left: 0.5em;
     }
 }
-
 
 
 /* STYLES */
