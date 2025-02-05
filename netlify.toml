@@ -4,11 +4,3 @@
 
 [context.production.environment]
   GIT_SSH_COMMAND = "ssh -o StrictHostKeyChecking=no"
-
-[[plugins]]
-  package = "@netlify/plugin-image-optimization"
-
-
-[image-optimization]
-  quality = 75
-  formats = ["webp", "jpeg", "png"]
