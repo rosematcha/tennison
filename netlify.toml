@@ -2,20 +2,6 @@
   publish = "_site"  # Your publish directory
   command = "npm run build"  # Your build command
 
-[[plugins]]
-  package = "netlify-plugin-image-optim"
-  [plugins.inputs]
-    quality = 75  # Set the quality of the optimized images (0-100)
-    formats = ["webp", "jpeg", "png"]  # Specify the formats to convert images to
-    maxSize = 5000000  # Maximum size for images to be optimized (5 MB)
-    # Optional: Specify resolutions for responsive images
-    resolutions = [320, 640, 1280, 1920]  # Example resolutions in pixels
-
-[[plugins]]
-  package = "netlify-plugin-inline-critical-css"
-
-[[plugins]]
-  package = "netlify-plugin-minify-html"
-
 [context.production.environment]
   GIT_SSH_COMMAND = "ssh -o StrictHostKeyChecking=no"
+  PYTHON_VERSION = "3.8"
