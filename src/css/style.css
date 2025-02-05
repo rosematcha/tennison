@@ -20,15 +20,19 @@ p{
     transition: width 0.1s ease-in-out;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 599px) {
     .logo, .logo > picture, .logo > picture > img, .logo > picture > source {
         width: 150px;
     }
     li:first-child a#navbar-member {
         margin-left: 0;
+        padding-left: 8px;
     }
     #navbar-member {
-        margin-left: 0.5em;
+        margin-left: 12px !important;
+    }
+    ul{
+        padding: 0px;
     }
 }
 
